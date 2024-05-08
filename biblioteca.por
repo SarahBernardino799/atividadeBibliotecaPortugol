@@ -2,31 +2,29 @@ programa
 {
 	//Criando vetores para armazenar as informações
 	cadeia livros[5] = {
-"Título: "+ "administração" +"\nAutor: " + "Roberto Cunha Neto" + "\nAno da publicação: "+ "2021"+ "\nGênero: "+"Literatura "+"\nPaginas:"+"250"+"\nEditora: "+"Senac São Paulo"+"\nDescrição:"+"Explicação das teorias administrativas."+"\n",
-	"", "" , "" , ""
+	"","", "" , "" , ""
 	}
 	cadeia membros[5] = {
-	"Nome: "+ "Morgana Evellyn" +"\nEndereço: " + "Rua Joquei Club 2020" + "\nTelefone "+ "85996777707"+"\nEmail:" + "morgana@email.com"+"\n",
-	"" , "" , "" , ""
+	"","" , "" , "" , ""
 	}
 	cadeia emprestimos[5] = {
-	"",	"",	"",	"",	""
+	"","","","",""
 	}
 	cadeia livrosEmprestados[5] = {
-	"",	"",	"",	"",	""
+	"","","","",""
 	}  
 	//Função menu principal para consultar informações sobre livros, membros e empréstimos
 	funcao consulta(){
 		inteiro opcao = 0
-    escreva("------------------------------ \n")
-    escreva("Livraria Minerva:             |\n")
-    escreva("Escolha a opção que deseja:   |\n")
+    		escreva("------------------------------ \n")
+    		escreva("Livraria Minerva:             |\n")
+    		escreva("Escolha a opção que deseja:   |\n")
 		escreva("------------------------------ \n")
 		escreva("1 -> Livros disponíveis       |\n")
 		escreva("2 -> Usuarios                 |\n")
 		escreva("3 -> Empréstimos              |\n")
 		escreva("4 -> Livros alugados          |\n")
-    escreva("------------------------------ \n")
+    		escreva("------------------------------ \n")
 		leia(opcao)
 		limpa()
 
@@ -81,11 +79,11 @@ programa
 		cadeia autor =""
 		cadeia anoPublicacao=""
 		cadeia genero=""
-    cadeia paginas=""
-    cadeia editora=""
-    cadeia descricao=""
+   		cadeia paginas=""
+   		cadeia editora=""
+    		cadeia descricao=""
 
-    escreva("----------------------------------- \n")
+   		escreva("----------------------------------- \n")
 		escreva("Digite o Titulo do livro: \n")
 		leia(titulo)
 		escreva("Digite o(a) Autor(a) do livro: \n")
@@ -94,13 +92,13 @@ programa
 		leia(anoPublicacao)
 		escreva("Digite o Gênero do livro: \n")
 		leia(genero)
-    escreva("Digite a quantidade de páginas do livro: \n")
-    leia(paginas)
-    escreva("Digite a Editora do livro: \n")
-    leia(editora)
-    escreva("Digite uma breve descrição do livro: \n")
-    leia(descricao)
-    escreva("----------------------------------- \n")
+   		escreva("Digite a quantidade de páginas do livro: \n")
+  		leia(paginas)
+    		escreva("Digite a Editora do livro: \n")
+    		leia(editora)
+   		escreva("Digite uma breve descrição do livro: \n")
+    		leia(descricao)
+    		escreva("----------------------------------- \n")
 
 		para(inteiro i=0; i<5 ; i++){
 			se(livros[i] == ""){
@@ -114,7 +112,7 @@ programa
 			se(livros[i]!= ""){
 			escreva("\n===============\n")
 			escreva("Livro Cadastrado!\n"+ livros[i])
-      escreva("\n Sucesso!! \n")
+      			escreva("\n Sucesso!! \n")
 			escreva("\n===============\n")
 			}
 			
@@ -135,9 +133,9 @@ programa
 		leia(endereco)
 		escreva("Digite o telefone: \n")
 		leia(telefone)
-    escreva("Digite o email: \n")
+    		escreva("Digite o email: \n")
 		leia(email)
-    escreva("\n-------------------------------\n")
+    		escreva("\n-------------------------------\n")
 
 		para(inteiro i=0; i<5 ; i++){
 			se(membros[i] == ""){
@@ -229,7 +227,7 @@ programa
 	funcao devolveLivro(){
 		inteiro opcao = 0
 		escreva("Escolha um livro para devolver\n\n")
-		para(inteiro i=0; i<5 ; i++){
+		para(inteiro i=0; i<1 ; i++){
 
 				se(livrosEmprestados[i]!= ""){
 				escreva("\n===============\n")
@@ -246,7 +244,7 @@ programa
 				livrosEmprestados[opcao]=""
 				escreva("\n===============\n")
 				escreva("Livro Devolvido!\n")
-        escreva("Sucesso!! \n")
+       				escreva("Sucesso!! \n")
 				escreva("\n===============\n")
 				}
 			}
@@ -261,17 +259,17 @@ programa
 		inteiro opcao =1
 		//menu principal
 		enquanto(opcao!=0){
-      escreva("------------------------------------- \n")
+      			escreva("------------------------------------- \n")
 			escreva("Bem Vindo(a) a Livraria Minerva:     |\n")
-      escreva("Escolha a opção que deseja:          |\n")
-      escreva("------------------------------------- \n")
+     			escreva("Escolha a opção que deseja:          |\n")
+      			escreva("------------------------------------- \n")
 			escreva("1 -> Cadastro de livro               |\n")
 			escreva("2 -> Cadastro de usuario             |\n")
 			escreva("3 -> Cadastro de empréstimo          |\n")
 			escreva("4 -> Devolução de livro              |\n")
 			escreva("5 -> Consulta                        |\n")
 			escreva("0 -> Encerrar                        |\n")
-      escreva("------------------------------------\n")
+     			escreva("------------------------------------\n")
 			leia(opcao)
 			limpa()
 			//Opções e funções
